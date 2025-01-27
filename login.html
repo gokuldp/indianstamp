@@ -1,77 +1,101 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>India Stamp</title>
+    <style>
+        body {
+            background-color: rgb(234, 11, 11);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 50px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0;
+            text-align: center;
+            flex: 1;
+        }
+
+        header img {
+            height: 80px;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 120px);
+        }
+
+        .form-container {
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 30px;
+            border: 4px solid white;
+            border-radius: 10px;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid white;
+            border-radius: 5px;
+            background-color: rgb(242, 234, 234);
+            color: black;
+        }
+
+        .form-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: white;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: rgb(200, 200, 200);
+        }
+    </style>
 </head>
-<style>
-    body{
-        background-color: rgb(234, 11, 11);
-        margin: 0%;
-    }
-    .one{
-        text-align: center;
-        padding:50px;
-        background-color: black;
-        color: white;
-        border: 4px solid white;
-        border: 4px solid rgb(242, 234, 234);
-       
-        
-    }
-    .one1{
-        padding-top: 50px;
-        padding-left: 40%;
-        padding-right:40%;
-        
-    }
-    .one2{
-        background-color: black;
-        width: 100%;
-        height: 120px;
-        
-       
-    }
-    .one2 h1{
-      display: inline;
-      color: white;
-      padding-right: 500px;
-      padding-left: 500px;
-      padding-bottom: 70px;
-      font-size:50px;
-    }
-    .one3{
-        display: inline;
-        padding-top: 20px;
-        padding-left: 10px;
-    }
-    .one4{
-        display: inline;
-        padding-top: 20px;
-        
-    }
-</style>
 
 <body>
+    <header>
+        <img src="India_Post_Logo_xs.svg" alt="India Post Logo">
+        <h1>Indian Stamp</h1>
+        <img src="logo.jpeg" alt="Logo">
+    </header>
 
-    <div class="one2">
-    <img src="India_Post_Logo_xs.svg" height="80px" class="one3">
-    <h1 >Indian Stamp</h1>
-    <img src="logo.jpeg" height="80px" class="one4">
-    </div>
-
-
-    <div class="one1">
-    <form class="one">
-        <label >Username: </label>
-        <input type="text" name="username"><br><br>
-        <label >password:</label>
-        <input type="text"  name="password"><br>
-
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-</div>
+    <main>
+        <div class="form-container">
+            <form>
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required><br>
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required><br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </main>
 </body>
 
 </html>
